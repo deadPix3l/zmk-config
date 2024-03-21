@@ -37,7 +37,7 @@ Glove80 Flash instructions
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <500>;
+    tapping-term-ms = <1000>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <200>;
     bindings = <&kp>, <&kp>;
@@ -48,7 +48,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
 /* right-hand HRMs */
 ZMK_BEHAVIOR(hmr, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <300>;
+    tapping-term-ms = <1000>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <200>;
     bindings = <&kp>, <&kp>;
