@@ -34,13 +34,6 @@ Glove80 Flash instructions
 #define KEYS_R RC1 RC2 RC3 RC4 RC5 RN0 RN1 RN2 RN3 RN4 RN5 RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 RF1 RF2 RF3 RF4 RF5
 #define THUMBS LH0 LH1 LH2 LH3 LH4 LH5 RH0 RH1 RH2 RH3 RH4 RH5
 
-// Magic key (glove80 factory macro)
-ZMK_BEHAVIOR(magic, hold_tap,
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    bindings = <&mo>, <&rgb_ug_status_macro>;
-)
-
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
