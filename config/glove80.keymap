@@ -1,7 +1,7 @@
 /* 
 Glove80 Flash instructions
 
-- hold bottom outside key (RF5, RF5) and ring finger above home row (RT3, LT3)
+- hold bottom outside key (RF5, RF5) and Middle finger above home row (RT2, LT2)
 - plug in (check that light pulses slowly, indicating bootloader mode)
 
 - sudo mount /dev/XXX /mnt/usb
@@ -37,7 +37,7 @@ Glove80 Flash instructions
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <1000>;
+    tapping-term-ms = <400>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <200>;
     bindings = <&kp>, <&kp>;
@@ -48,7 +48,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
 /* right-hand HRMs */
 ZMK_BEHAVIOR(hmr, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <1000>;
+    tapping-term-ms = <400>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <200>;
     bindings = <&kp>, <&kp>;
@@ -68,12 +68,12 @@ GLV80_LAYER(engram,
 /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
       &kp GRAVE     &kp G         &kp X         &kp J         &kp K         &kp MINUS    ,   &kp FSLH        &kp R        &kp M         &kp F         &kp P         &kp PG_UP
 /* ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯   ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ */
-      &none         &kp HOME      &kp END       &kp LEFT      &kp RIGHT                  ,                   &kp UP       &kp DOWN      &kp LBKT      &kp RBKT      &kp PG_DN
+      &magic        &kp HOME      &kp END       &kp LEFT      &kp RIGHT                  ,                   &kp UP       &kp DOWN      &kp LBKT      &kp RBKT      &kp PG_DN
 /* ╰─────────────┴─────────────┴────────────┴─────────────┴─────────────╯                                ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ */
                                                                                          ,
 /*                                   ╭─────────────┬─────────────┬─────────────╮                   ╭─────────────┬─────────────┬─────────────╮                                         */
-                                       &none         &none         &none                              &none         &none          &none
+                                       &kp TAB         &kp EQUAL    &none                              &kp F24       &none        &kp ESC
 /*                                   ├─────────────┼─────────────┼─────────────┤      */ , /*      ├─────────────┼─────────────┼─────────────┤                                         */
-                                       &kp BSPC      &kp DEL       &kp LALT                           &kp RALT     &kp RET       &kp SPACE
+                                       &kp BSPC      &kp DEL       &key_repeat                        &kp RALT     &kp RET       &kp SPACE
 /*                                   ╰─────────────┴─────────────┴─────────────╯                   ╰─────────────┴─────────────┴─────────────╯                                         */
 )
